@@ -37,3 +37,13 @@ constant factors.
 Describe your reasoning and the conclusion you've come to. Your reasoning is
 most important -- you can easily find the answer, but you need to demonstrate
 that you've understood the concept. Add your answer to this markdown file.
+
+## Complexity Answer
+
+The average number of swaps needed for each iteration should be around (n-1)/4, because on average each value will swap with half of the other values. We can determine this by starting at the worst case for the algorithm. If we recognize that, in the worst case, each element in the array the program will make that many comparisons, we can determine that the worst will make approximately (n-1)/2 comparisons total. If we take the average of this list of comparisons made, we get (n-1)/4. We can then multiply this by the size of the list to get n*(n-1)/4. With this value in mind, we can simplify disregarding constants as follows:
+
+$\Theta(n*(n-1)/4)$ -> $\Theta(n^2)$
+
+Based on this analysis, we can determine that the average-case time complexity is $\Theta(n^2)$
+
+I used the following source to ensure that I was properly understanding how this average case would be found: https://www.interviewkickstart.com/learn/insertion-sort
